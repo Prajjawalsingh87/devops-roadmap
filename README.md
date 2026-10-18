@@ -6,6 +6,9 @@
 
 📚 Notes · 🧩 Guides · ⚙️ Real-world examples · 🚀 Built one topic at a time
 
+![Guides](https://img.shields.io/badge/guides-2-blue)
+![Status](https://img.shields.io/badge/status-learning%20in%20public-brightgreen)
+
 </div>
 
 ---
@@ -20,20 +23,50 @@ Each topic gets its own folder with a clean, practical reference guide (PDF + no
 
 ---
 
+## 📚 Guides at a Glance
+
+| # | Topic | Guide | Pages | Status |
+|---|---|---|---|---|
+| 1 | AWS IAM — Identity & Access Management | [📄 AWS_IAM_Complete_Guide.pdf](./aws-iam/AWS_IAM_Complete_Guide.pdf) | 20 | ✅ Complete |
+| 2 | NGINX — Web Server, Reverse Proxy & Load Balancer | [📄 NGINX_Complete_Reference_Guide.pdf](./nginx/NGINX_Complete_Reference_Guide.pdf) | 20 | ✅ Complete |
+
+---
+
 ## 🗺️ Roadmap
 
 Topics are added as I learn them — roughly in the order a real DevOps/Cloud path tends to go. Checked items have a complete guide in this repo.
 
+```mermaid
+flowchart LR
+  P1[Phase 1<br/>Foundations] --> P2[Phase 2<br/>AWS Core]
+  P2 --> P3[Phase 3<br/>Web Servers &<br/>Containers]
+  P3 --> P4[Phase 4<br/>CI/CD &<br/>Orchestration]
+  P4 --> P5[Phase 5<br/>IaC &<br/>Observability]
+  P5 --> P6[Phase 6<br/>Serverless]
+```
+
+### Phase 1 — Foundations
+- [ ] Linux Fundamentals for DevOps
+- [ ] Git & GitHub Workflows
+
+### Phase 2 — AWS Core
 - [x] **AWS IAM** — Identity & Access Management *(see [`/aws-iam`](./aws-iam))*
 - [ ] AWS EC2 & Networking (VPC, Subnets, Security Groups)
 - [ ] AWS S3 & Storage
-- [ ] Linux Fundamentals for DevOps
-- [ ] Git & GitHub Workflows
+
+### Phase 3 — Web Servers & Containers
+- [x] **NGINX** — Web server, reverse proxy, load balancing & TLS *(see [`/nginx`](./nginx))*
 - [ ] Docker & Containerization
+
+### Phase 4 — CI/CD & Orchestration
 - [ ] CI/CD Pipelines (GitHub Actions / Jenkins)
-- [ ] Kubernetes Basics
+- [ ] Kubernetes Basics — hands-on lab in progress: [kubernetes-lab](https://github.com/Prajjawalsingh87/kubernetes-lab)
+
+### Phase 5 — Infrastructure as Code & Observability
 - [ ] Terraform & Infrastructure as Code
 - [ ] Monitoring & Logging (CloudWatch, Prometheus, Grafana)
+
+### Phase 6 — Serverless
 - [ ] AWS Lambda & Serverless
 
 *(Roadmap will evolve — items may be reordered or expanded as I go deeper.)*
@@ -45,17 +78,18 @@ Topics are added as I learn them — roughly in the order a real DevOps/Cloud pa
 ```
 devops-roadmap/
 ├── aws-iam/
-│   ├── AWS_IAM_Complete_Guide.pdf
-│   └── notes.md
+│   └── AWS_IAM_Complete_Guide.pdf
+├── nginx/
+│   └── NGINX_Complete_Reference_Guide.pdf
 ├── (future topics follow the same pattern)
 └── README.md
 ```
 
-Each topic folder is self-contained: a complete guide (PDF) plus any quick-reference notes, diagrams, or policy/config examples relevant to that topic.
+Each topic folder is self-contained: a complete guide (PDF), with room for quick-reference notes, diagrams, or policy/config examples relevant to that topic.
 
 ---
 
-## ✅ Current Guide: AWS IAM
+## ✅ Guide: AWS IAM
 
 The first completed guide covers **AWS Identity and Access Management** end-to-end:
 
@@ -71,12 +105,40 @@ The first completed guide covers **AWS Identity and Access Management** end-to-e
 
 ---
 
+## ✅ Guide: NGINX
+
+A deep dive into **NGINX** — architecture, configuration and production patterns (8 chapters, Ubuntu/Debian focused):
+
+| Covered | Covered |
+|---|---|
+| Introduction & Event-Driven Architecture | Reverse Proxy (headers, timeouts, caching) |
+| Configuration Contexts & Location Matching | Load Balancing (upstreams, algorithms, health checks) |
+| Hosting Static Sites & SPAs | TLS/SSL with Certbot & Security Headers |
+| Basic Authentication (htpasswd) | Advanced: WebSockets, Gzip, Rate Limiting, Logging |
+
+📄 **[Read the full NGINX guide →](./nginx/NGINX_Complete_Reference_Guide.pdf)**
+
+---
+
 ## 🎯 Goals
 
 - Build a solid foundation in cloud infrastructure and DevOps practices
 - Document everything in a way that's useful to revisit later
 - Move from theory → hands-on labs → real projects
 - Eventually deploy and manage real cloud-based projects end-to-end
+
+---
+
+## 🧭 How to Use This Repo
+
+1. Pick a phase from the roadmap above — they build on each other, but each guide stands alone.
+2. Open the PDF in the topic folder (GitHub renders PDFs in the browser), or clone the repo to read offline:
+
+   ```bash
+   git clone https://github.com/Prajjawalsingh87/devops-roadmap.git
+   ```
+
+3. Try the examples on a free-tier or sandbox account — never practise on a production account.
 
 ---
 
