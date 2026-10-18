@@ -85,7 +85,7 @@ devops-roadmap/
 └── README.md
 ```
 
-Each topic folder is self-contained: a complete guide (PDF) plus any quick-reference notes, diagrams, or policy/config examples relevant to that topic.
+Each topic folder is self-contained: a complete guide (PDF), with room for quick-reference notes, diagrams, or policy/config examples relevant to that topic.
 
 ---
 
