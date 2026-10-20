@@ -41,8 +41,10 @@ const lines = readme.split("\n");
 // Guides table: | # | Topic | [📄 file.pdf](./dir/file.pdf) | Pages | Status |
 const guides = [];
 for (const line of lines) {
+  if (!/^\|\s*\d+\s*\|/.test(line)) continue; // numbered rows of the Guides at a Glance table
   const m = line.match(/^\|\s*\d+\s*\|\s*(.+?)\s*\|\s*\[[^\]]*\]\(([^)]+\.pdf)\)\s*\|\s*(\d+)?\s*\|\s*(.+?)\s*\|$/);
-  if (m) guides.push({ title: plain(m[1]), pdf: resolveHref(m[2]), folder: m[2].replace(/^\.?\//, "").split("/")[0], pages: m[3] ? Number(m[3]) : null, status: plain(m[4]) });
+  if (!m) throw new Error(`Can't read guide row (expected | # | Topic | [file](./dir/file.pdf) | Pages | Status |): ${line}`);
+  guides.push({ title: plain(m[1]), pdf: resolveHref(m[2]), folder: m[2].replace(/^\.?\//, "").split("/")[0], pages: m[3] ? Number(m[3]) : null, status: plain(m[4]) });
 }
 
 // "## ✅ Guide: NAME" sections: collect the cells of their "Covered" table.
@@ -62,6 +64,8 @@ for (let i = 0; i < lines.length; i++) {
 const phases = [];
 const seen = new Set();
 for (const line of lines) {
+  // The roadmap ends at the next "## " section after the phases.
+  if (phases.length && /^##\s/.test(line)) break;
   const heading = line.match(/^###\s+(Phase\s+\d+)\s*[—–-]\s*(.+)$/);
   if (heading) {
     phases.push({ id: slug(heading[1]), label: heading[1], title: heading[2].trim(), topics: [] });
