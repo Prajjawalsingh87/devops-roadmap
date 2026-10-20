@@ -155,3 +155,10 @@ This is primarily a personal learning repo, but if you spot an error or have a s
 *Started June 2026 — updated as I go.*
 
 </div>
+
+
+## Track hands-on practice
+
+Copy a row from [STUDY_LOG.md](STUDY_LOG.md) for each experiment. Record an expected
+outcome, evidence, and a next question. The repository contains reference documents;
+it has no application build or runtime to deploy on Vercel.
