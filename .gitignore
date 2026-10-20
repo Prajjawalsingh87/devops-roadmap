@@ -8,3 +8,7 @@ Thumbs.db
 # Local drafts and exports
 *.tmp
 ~$*
+
+.vercel/
+
+.code-review-graph/
