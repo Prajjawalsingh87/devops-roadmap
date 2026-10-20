@@ -9,6 +9,8 @@
 ![Guides](https://img.shields.io/badge/guides-2-blue)
 ![Status](https://img.shields.io/badge/status-learning%20in%20public-brightgreen)
 
+**🌐 Interactive roadmap:** https://prajjawalsingh87.github.io/devops-roadmap/
+
 </div>
 
 ---
@@ -71,6 +73,8 @@ flowchart LR
 
 *(Roadmap will evolve — items may be reordered or expanded as I go deeper.)*
 
+> 🌐 The same roadmap is published as an [interactive checklist](https://prajjawalsingh87.github.io/devops-roadmap/) where you can tick topics (saved in your browser), see progress per phase and search. **This README is the source of truth:** the site is generated from the `### Phase N — Title` headings and `- [ ]` / `- [x]` items above, the *Guides at a Glance* table and the *Covered* tables, so keep that format when editing.
+
 ---
 
 ## 📂 Repo Structure
@@ -82,6 +86,8 @@ devops-roadmap/
 ├── nginx/
 │   └── NGINX_Complete_Reference_Guide.pdf
 ├── (future topics follow the same pattern)
+├── site/                 # GitHub Pages site: build.mjs turns this README into roadmap.json
+├── .github/workflows/    # link check + Pages build/deploy
 └── README.md
 ```
 
@@ -139,6 +145,15 @@ A deep dive into **NGINX** — architecture, configuration and production patter
    ```
 
 3. Try the examples on a free-tier or sandbox account — never practise on a production account.
+
+4. Or use the [interactive roadmap](https://prajjawalsingh87.github.io/devops-roadmap/) to track your own progress.
+
+### Preview the site locally
+
+```bash
+node site/build.mjs                         # writes _site/ (needs Node 18+, no dependencies)
+python3 -m http.server 8000 --directory _site
+```
 
 ---
 

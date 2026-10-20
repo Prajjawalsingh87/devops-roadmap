@@ -8,3 +8,6 @@ Thumbs.db
 # Local drafts and exports
 *.tmp
 ~$*
+
+# Built Pages site (node site/build.mjs)
+_site/

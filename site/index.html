@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DevOps Roadmap</title>
+  <meta name="description" content="A structured DevOps and Cloud Engineering roadmap: phases, topics you can tick off, and free PDF guides.">
+  <meta name="theme-color" content="#0f766e">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#roadmap">Skip to roadmap</a>
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Learning in public</p>
+      <h1>DevOps Roadmap</h1>
+      <p class="tagline" id="tagline">My structured journey through DevOps &amp; Cloud Engineering.</p>
+      <div class="overall" aria-live="polite">
+        <div class="overall-top">
+          <span class="overall-label">Your progress</span>
+          <span class="overall-count" id="overall-count">–</span>
+        </div>
+        <div class="bar bar-lg" role="progressbar" aria-label="Overall progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="overall-bar"><span></span></div>
+        <p class="hint">Tick topics as you learn them. Progress is saved in this browser only.</p>
+      </div>
+      <nav class="hero-links" aria-label="Project links">
+        <a href="#guides">Guides</a>
+        <a id="repo-link" href="https://github.com/Prajjawalsingh87/devops-roadmap">GitHub repo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="toolbar" role="search">
+      <label class="search">
+        <span class="sr-only">Search topics</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input id="search" type="search" placeholder="Search topics, e.g. docker, IAM, terraform" autocomplete="off">
+      </label>
+      <div class="filters" role="group" aria-label="Show">
+        <button type="button" class="chip" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="chip" data-filter="todo" aria-pressed="false">To do</button>
+        <button type="button" class="chip" data-filter="done" aria-pressed="false">Done</button>
+      </div>
+      <button type="button" class="link-button" id="reset">Reset progress</button>
+    </div>
+    <p class="status" id="status" role="status"></p>
+
+    <section id="roadmap" aria-label="Roadmap phases" class="phases">
+      <noscript><p>This page needs JavaScript to show the checklist. The roadmap is also in the <a href="https://github.com/Prajjawalsingh87/devops-roadmap#readme">README</a>.</p></noscript>
+    </section>
+
+    <section id="guides" class="guides-section" aria-labelledby="guides-title">
+      <h2 id="guides-title">Guides</h2>
+      <p class="section-note">Practical reference guides, free to read in the browser.</p>
+      <div class="guides" id="guides-list"></div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <p>Generated from the repo's <a href="https://github.com/Prajjawalsingh87/devops-roadmap#readme">README.md</a>, the single source of truth for this roadmap.</p>
+  </footer>
+  <script src="app.js" defer></script>
+</body>
+</html>
